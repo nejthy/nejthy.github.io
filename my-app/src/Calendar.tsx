@@ -11,7 +11,6 @@ const gifts: Gift[] = Array.from({ length: 24 }, (_, i) => ({
 }));
 
 const Calendar = () => {
-  const days = Array.from({ length: 24 }, (_, i) => i + 1);
   const today = new Date().getDate();
   const [opened, setOpened] = useState<number[]>(() => {
     const saved = localStorage.getItem("openedDays");
