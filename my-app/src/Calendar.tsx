@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Grid, GridItem, Button } from "@chakra-ui/react";
 
 interface Gift {
   day: number;
@@ -29,23 +30,31 @@ const Calendar = () => {
 
   return (
     <div>
-      <div>
+      <Grid templateColumns="repeat(6, 1fr)" gap={4} mt={8}>
         {gifts.map((gift) => (
-          <button key={gift.day} onClick={() => openDay(gift.day)}>
-            {opened.includes(gift.day) ? gift.content : gift.day}
-          </button>
+          <GridItem key={gift.day}>
+            <Button
+              w="100%"
+              h="80px"
+              bg={opened.includes(gift.day) ? "pink.200" : "gray.100"}
+              onClick={() => openDay(gift.day)}
+            >
+              {opened.includes(gift.day) ? gift.content : gift.day}
+            </Button>
+          </GridItem>
         ))}
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            setOpened([]);
-            localStorage.removeItem("openedDays");
-          }}
-        >
-          Reset
-        </button>
-      </div>
+      </Grid>
+
+      <Button
+        colorScheme="red"
+        mt={4}
+        onClick={() => {
+          setOpened([]);
+          localStorage.removeItem("openedDays");
+        }}
+      >
+        Reset
+      </Button>
     </div>
   );
 };
