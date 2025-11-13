@@ -1,13 +1,13 @@
 import "./App.css";
 import Calendar from "./Calendar";
+import { Toaster } from "./toaster";
 
 function App() {
   return (
-    <div>
-      <h1>🎄 Adventní kalendář</h1>
-      <p>Otevři okénko a objev překvapení!</p>
+    <>
       <Calendar />
-    </div>
+      <Toaster />
+    </>
   );
 }
 
