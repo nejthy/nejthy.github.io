@@ -1,4 +1,4 @@
-import { Button, CloseButton, Dialog, Portal } from "@chakra-ui/react";
+import { Button, Dialog, Portal } from "@chakra-ui/react";
 import { type ComponentType, type ReactNode } from "react";
 import { Riddles } from "./Riddles";
 import { useSolvedRiddles } from "./hooks/useSolvedRiddles";
@@ -94,12 +94,9 @@ export const GiftModal = ({ open, onClose, day, content }: GiftModalProps) => {
             </DialogBody>
             <DialogFooter>
               <DialogCloseTrigger asChild>
-                <Button variant="outline"></Button>
+                <Button variant="solid">Zavřít</Button>
               </DialogCloseTrigger>
             </DialogFooter>
-            <DialogCloseTrigger asChild>
-              <CloseButton position="absolute" top="3" right="3" size="sm" />
-            </DialogCloseTrigger>
           </DialogContent>
         </DialogPositioner>
       </Portal>

@@ -14,7 +14,7 @@ const gifts: Gift[] = Array.from({ length: 24 }, (_, i) => ({
   day: i + 1,
   content: (
     <img
-      src={`/images/day${i + 1}.png`}
+      src={`/images/day${i + 1}.jpeg`}
       alt={`Dárek číslo ${i + 1}`}
       style={{
         width: "100%",
@@ -84,37 +84,21 @@ const Calendar = () => {
     <>
       <VStack gap={6} p={6}>
         <Heading size="lg">🎄 Adventní kalendář pro Ádika🎁</Heading>
-        <Grid templateColumns="repeat(6, 100px)" gap={4}>
+        <Grid templateColumns="repeat(6, 160px)" gap={5}>
           {gifts.map((gift) => (
             <GridItem key={gift.day}>
               <Button
                 w="100%"
-                h="100px"
+                h="160px"
                 borderRadius="md"
-                bg={
-                  shouldShowImage(gift.day)
-                    ? "pink.200"
-                    : opened.includes(gift.day)
-                    ? "yellow.200"
-                    : "gray.100"
-                }
-                color={
-                  shouldShowImage(gift.day)
-                    ? "gray.700"
-                    : opened.includes(gift.day)
-                    ? "gray.800"
-                    : "black"
-                }
-                fontSize="lg"
+                bg={shouldShowImage(gift.day) ? "pink.200" : "gray.100"}
+                color={shouldShowImage(gift.day) ? "gray.700" : "black"}
+                fontSize="xl"
                 fontWeight="bold"
                 boxShadow="md"
                 _hover={{
                   transform: "scale(1.05)",
-                  bg: shouldShowImage(gift.day)
-                    ? "pink.300"
-                    : opened.includes(gift.day)
-                    ? "yellow.300"
-                    : "gray.200",
+                  bg: shouldShowImage(gift.day) ? "pink.300" : "gray.200",
                 }}
                 transition="all 0.15s ease"
                 onClick={() => openDay(gift.day)}
