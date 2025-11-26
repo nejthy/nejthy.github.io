@@ -49,13 +49,13 @@ export const riddles = [
   },
   {
     day: 10,
-    riddle: "What is the capital of Kenya?",
-    correctAnswer: "Nairobi",
+    riddle: "Kolik malých formulek už mám?",
+    correctAnswer: "8",
   },
   {
     day: 11,
-    riddle: "What is the capital of Uganda?",
-    correctAnswer: "Kampala",
+    riddle: "Jaké týmy velkých formulí mám? (první ta stará, druhá ta nová)",
+    correctAnswer: "mclaren,redbull",
   },
   {
     day: 12,
