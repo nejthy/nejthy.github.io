@@ -59,23 +59,23 @@ export const riddles = [
   },
   {
     day: 12,
-    riddle: "What is the capital of Tanzania?",
-    correctAnswer: "Dar es Salaam",
+    riddle: "Co dělá pradlenka",
+    correctAnswer: "plete",
   },
   {
     day: 13,
-    riddle: "What is the capital of Malawi?",
-    correctAnswer: "Lilongwe",
+    riddle: "Co dělá švadlena",
+    correctAnswer: "šmudlá",
   },
   {
     day: 14,
-    riddle: "What is the capital of Zambia?",
-    correctAnswer: "Lusaka",
+    riddle: "Pořekadlo, které platí, pro vyspalou Áďu",
+    correctAnswer: "happy sleep happy áďa",
   },
   {
     day: 15,
-    riddle: "What is the capital of Zimbabwe?",
-    correctAnswer: "Harare",
+    riddle: "Celý den myslíš na to že tomáš v puse",
+    correctAnswer: "penis",
   },
   {
     day: 16,
