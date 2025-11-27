@@ -79,22 +79,22 @@ export const riddles = [
   },
   {
     day: 16,
-    riddle: "What is the capital of Namibia?",
-    correctAnswer: "Windhoek",
+    riddle: "Moje velikost",
+    correctAnswer: "špunt",
   },
   {
     day: 17,
-    riddle: "What is the capital of Botswana?",
-    correctAnswer: "Gaborone",
+    riddle: '"Oblíbená" snídaně',
+    correctAnswer: "kaše",
   },
   {
     day: 18,
-    riddle: "What is the capital of Lesotho?",
-    correctAnswer: "Maseru",
+    riddle: "",
+    correctAnswer: "",
   },
   {
     day: 19,
-    riddle: "What is the capital of Swaziland?",
+    riddle: "",
     correctAnswer: "Mbabane",
   },
   {
@@ -114,12 +114,12 @@ export const riddles = [
   },
   {
     day: 23,
-    riddle: "What is the capital of Namibia?",
-    correctAnswer: "Windhoek",
+    riddle: "",
+    correctAnswer: "",
   },
   {
     day: 24,
-    riddle: "What is the capital of Namibia?",
-    correctAnswer: "Windhoek",
+    riddle: "",
+    correctAnswer: "",
   },
 ];
