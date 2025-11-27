@@ -20,7 +20,8 @@ const gifts: Gift[] = Array.from({ length: 24 }, (_, i) => ({
         width: "100%",
         height: "100%",
         objectFit: "cover",
-        borderRadius: "inherit",
+        borderRadius: "6px",
+        display: "block",
       }}
     />
   ),
@@ -96,6 +97,9 @@ const Calendar = () => {
                 fontSize="xl"
                 fontWeight="bold"
                 boxShadow="md"
+                p={0}
+                overflow="hidden"
+                position="relative"
                 _hover={{
                   transform: "scale(1.05)",
                   bg: shouldShowImage(gift.day) ? "pink.300" : "gray.200",
@@ -103,7 +107,24 @@ const Calendar = () => {
                 transition="all 0.15s ease"
                 onClick={() => openDay(gift.day)}
               >
-                {shouldShowImage(gift.day) ? gift.content : gift.day}
+                {shouldShowImage(gift.day) ? (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {gift.content}
+                  </div>
+                ) : (
+                  gift.day
+                )}
               </Button>
             </GridItem>
           ))}

@@ -54,8 +54,8 @@ export const GiftModal = ({ open, onClose, day, content }: GiftModalProps) => {
               overflowY="auto"
               px={4}
             >
-              {/* Hádanka */}
-              {day && <Riddles day={day} />}
+              {/* Hádanka - zobrazí se pouze pokud není vyřešena */}
+              {day && !isRiddleSolvedForDay && <Riddles day={day} />}
 
               {/* Obrázek - zobrazí se až po vyřešení hádanky */}
               {content && isRiddleSolvedForDay && (
