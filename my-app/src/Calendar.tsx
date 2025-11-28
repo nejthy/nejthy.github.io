@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, GridItem, Button, VStack, Heading } from "@chakra-ui/react";
+import { Grid, GridItem, Button, VStack, Heading, Box } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { toaster } from "./toaster";
 import { GiftModal } from "./modal";
@@ -83,57 +83,76 @@ const Calendar = () => {
 
   return (
     <>
-      <VStack gap={6} p={6}>
-        <Heading size="lg">🎄 Adventní kalendář pro Ádika🎁</Heading>
-        <Grid templateColumns="repeat(6, 160px)" gap={5}>
-          {gifts.map((gift) => (
-            <GridItem key={gift.day}>
-              <Button
-                w="100%"
-                h="160px"
-                borderRadius="md"
-                bg={shouldShowImage(gift.day) ? "pink.200" : "gray.100"}
-                color={shouldShowImage(gift.day) ? "gray.700" : "black"}
-                fontSize="xl"
-                fontWeight="bold"
-                boxShadow="md"
-                p={0}
-                overflow="hidden"
-                position="relative"
-                _hover={{
-                  transform: "scale(1.05)",
-                  bg: shouldShowImage(gift.day) ? "pink.300" : "gray.200",
-                }}
-                transition="all 0.15s ease"
-                onClick={() => openDay(gift.day)}
-              >
-                {shouldShowImage(gift.day) ? (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {gift.content}
-                  </div>
-                ) : (
-                  gift.day
-                )}
-              </Button>
-            </GridItem>
-          ))}
-        </Grid>
+      <Box
+        minH="100vh"
+        position="relative"
+        backgroundImage="url('/images/vanoce.jpeg')"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        backgroundSize="cover"
+        _before={{
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          bg: "rgba(255, 255, 255, 0.1)",
+          zIndex: 0,
+        }}
+      >
+        <VStack gap={6} p={6} position="relative" zIndex={1}>
+          <Heading size="lg">🎄 Adventní kalendář pro Ádika🎁</Heading>
+          <Grid templateColumns="repeat(6, 160px)" gap={5}>
+            {gifts.map((gift) => (
+              <GridItem key={gift.day}>
+                <Button
+                  w="100%"
+                  h="160px"
+                  borderRadius="md"
+                  bg={shouldShowImage(gift.day) ? "pink.200" : "gray.100"}
+                  color={shouldShowImage(gift.day) ? "gray.700" : "black"}
+                  fontSize="xl"
+                  fontWeight="bold"
+                  boxShadow="md"
+                  p={0}
+                  overflow="hidden"
+                  position="relative"
+                  _hover={{
+                    transform: "scale(1.05)",
+                    bg: shouldShowImage(gift.day) ? "pink.300" : "gray.200",
+                  }}
+                  transition="all 0.15s ease"
+                  onClick={() => openDay(gift.day)}
+                >
+                  {shouldShowImage(gift.day) ? (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {gift.content}
+                    </div>
+                  ) : (
+                    gift.day
+                  )}
+                </Button>
+              </GridItem>
+            ))}
+          </Grid>
 
-        <Button colorScheme="red" onClick={resetCalendar}>
-          Resetovat kalendář
-        </Button>
-      </VStack>
+          <Button colorScheme="red" onClick={resetCalendar}>
+            Resetovat kalendář
+          </Button>
+        </VStack>
+      </Box>
 
       {/* Modal s obrázkem - obrázek se zobrazí pouze po vyřešení hádanky */}
       <GiftModal

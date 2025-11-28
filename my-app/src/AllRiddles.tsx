@@ -89,28 +89,28 @@ export const riddles = [
   },
   {
     day: 18,
+    riddle: "jak ti ráda řikám?",
+    correctAnswer: "pusinka",
+  },
+  {
+    day: 19,
+    riddle: "Nejlepší kamarád člověka (náš)",
+    correctAnswer: "Max",
+  },
+  {
+    day: 20,
     riddle: "",
     correctAnswer: "",
   },
   {
-    day: 19,
-    riddle: "",
-    correctAnswer: "Mbabane",
-  },
-  {
-    day: 20,
-    riddle: "What is the capital of South Africa?",
-    correctAnswer: "Pretoria",
-  },
-  {
     day: 21,
-    riddle: "What is the capital of Namibia?",
-    correctAnswer: "Windhoek",
+    riddle: "",
+    correctAnswer: "",
   },
   {
     day: 22,
-    riddle: "What is the capital of Namibia?",
-    correctAnswer: "Windhoek",
+    riddle: "",
+    correctAnswer: "",
   },
   {
     day: 23,
