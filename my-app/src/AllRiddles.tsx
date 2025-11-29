@@ -74,7 +74,7 @@ export const riddles = [
   },
   {
     day: 15,
-    riddle: "Celý den myslíš na to že tomáš v puse",
+    riddle: "Celý den myslíš na to že to máš v puse",
     correctAnswer: "penis",
   },
   {
