@@ -99,23 +99,23 @@ export const riddles = [
   },
   {
     day: 20,
-    riddle: "",
-    correctAnswer: "",
+    riddle: "Kolik máme kytek?",
+    correctAnswer: "7",
   },
   {
     day: 21,
-    riddle: "",
-    correctAnswer: "",
+    riddle: "Poslední naše oblíbená písnička?",
+    correctAnswer: "Nenapravitelná",
   },
   {
     day: 22,
-    riddle: "",
-    correctAnswer: "",
+    riddle: "Kolik je Maxovi? (číslo)",
+    correctAnswer: "12",
   },
   {
     day: 23,
-    riddle: "",
-    correctAnswer: "",
+    riddle: "Kolik je Maxovi juniorovi? (číslo)",
+    correctAnswer: "1",
   },
   {
     day: 24,
