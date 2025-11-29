@@ -79,7 +79,7 @@ export const riddles = [
   },
   {
     day: 16,
-    riddle: "Moje velikost",
+    riddle: "Jak jsem vysoká? Jako ...",
     correctAnswer: "špunt",
   },
   {
