@@ -119,7 +119,7 @@ export const riddles = [
   },
   {
     day: 24,
-    riddle: "",
-    correctAnswer: "",
+    riddle: "Datum, kdy jsme se poznaly",
+    correctAnswer: "23.2.2023",
   },
 ];
