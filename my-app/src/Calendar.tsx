@@ -158,9 +158,9 @@ const Calendar = () => {
             ))}
           </Grid>
 
-          <Button colorScheme="red" onClick={resetCalendar}>
+          {/* <Button colorScheme="red" onClick={resetCalendar}>
             Resetovat kalendář
-          </Button>
+          </Button> */}
         </VStack>
       </Box>
 

@@ -100,7 +100,7 @@ export const riddles = [
   {
     day: 20,
     riddle: "Kolik máme kytek?",
-    correctAnswer: "7",
+    correctAnswer: "6",
   },
   {
     day: 21,
