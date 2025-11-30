@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Grid, GridItem, Button, VStack, Heading, Box } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 import { toaster } from "./toaster";
@@ -33,9 +33,18 @@ const Calendar = () => {
     const saved = localStorage.getItem("openedDays");
     return saved ? JSON.parse(saved) : [];
   });
-  const { isRiddleSolved } = useSolvedRiddles();
+  const { isRiddleSolved, solvedRiddles } = useSolvedRiddles();
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const linkOpenedRef = useRef(false);
+
+  // Otevři link, když je den 24 vyřešen
+  useEffect(() => {
+    if (solvedRiddles.includes(24) && !linkOpenedRef.current) {
+      linkOpenedRef.current = true;
+      window.open("https://www.youtube.com/watch?v=u0nqSqFQNMc", "_blank");
+    }
+  }, [solvedRiddles]);
 
   const openDay = (day: number) => {
     if (!opened.includes(day) && day <= today) {
@@ -66,6 +75,7 @@ const Calendar = () => {
     setOpened([]);
     localStorage.removeItem("openedDays");
     localStorage.removeItem("solvedRiddles");
+    linkOpenedRef.current = false; // Reset ref při resetování kalendáře
     toaster.create({
       title: "Kalendář resetován",
       description: "Všechna okénka byla zavřena 🎁",
